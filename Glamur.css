@@ -1,0 +1,30 @@
+body{
+    display: flex;
+  flex-direction: column;
+}
+#baner {
+    background-color: grey;
+    color: gainsboro;
+    text-align: justify;
+    height: 150px;
+    width: 100%;
+}
+main {
+    background-color: darkgray;
+    color: darkslategrey;
+    height: 80%;
+    width: 100%;
+}
+#pblok, #dblok, #tblok{
+    background-color: darkgray;
+    color: darkslategrey;
+    height: 200px;
+    width: 100%;
+}
+footer {
+    background-color: black;
+    color: white;
+    height: 100px;
+    width: 100%;
+    flex: 0 0 auto;
+}
