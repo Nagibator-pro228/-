@@ -28,3 +28,15 @@ footer {
     width: 100%;
     flex: 0 0 auto;
 }
+table {
+    top: 50%;
+    float: right;
+    transform: translateY(-50%); 
+}
+td {
+    margin: 20px;
+    padding: 20px;
+}
+td:hover {
+    background-color: darkgrey;
+}
