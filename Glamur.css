@@ -1,53 +1,60 @@
-
-body{
+body {
     display: flex;
     flex-direction: column;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh; /* Высота всей страницы */
 }
+
 #baner {
+    display: flex; /* Используем Flexbox для расположения элементов */
+    justify-content: space-between; /* Таблица слева, логотип справа */
+    align-items: center; /* Центрируем содержимое по вертикали */
     background-color: grey;
     color: gainsboro;
-    text-align: justify;
     height: 150px;
     width: 100%;
+    padding: 0 20px; /* Отступы слева и справа для красоты */
+    box-sizing: border-box; /* Включаем padding в размеры */
 }
+
 main {
     background-color: darkgray;
-    color: darkslategrey;
-    height: 80%;
-    width: 100%;
+    flex: 1; /* Растягивает на оставшееся место */
     display: flex;
     gap: 20px;
-
+    align-items: stretch; /* Растягивает блоки по высоте */
 }
-#pblok, #dblok, #tblok{
-    background-color: darkgray;
+
+#pblok, #dblok, #tblok {
+    background-color: lightgray;
     color: darkslategrey;
-    flex: 1 1 300px;
+    flex: 1; /* Все блоки равной ширины */
     padding: 20px;
     box-sizing: border-box;
-    flex: 0 0 auto;
-
 }
+
 footer {
     background-color: black;
     color: white;
     height: 100px;
     width: 100%;
-    flex: 0 0 auto;
 }
 table {
-    top: 50%;
-    float: right;
-    transform: translateY(-50%); 
+    margin-left: 0; /* Прижимаем таблицу к левому краю */
+    padding-left: 0px; /* Можно добавить небольшой отступ от края */
+    text-align: left; /* Выравниваем текст внутри таблицы */
 }
 td {
-    margin: 20px;
-    padding: 20px;
-    
+    padding: 5px; /* Внутренние отступы для красоты */
+    text-align: left; /* Выравниваем текст внутри ячеек */
+}
+#logo {
+    margin: 0; /* Убираем внешние отступы логотипа */
+    padding: 0; /* Убираем внутренние отступы */
+    text-align: right; /* На всякий случай выравниваем текст справа */
+    font-size: 1.5em; /* Для выделения логотипа */
 }
 td:hover {
     background-color: darkgrey;
 }
-
