@@ -1,6 +1,9 @@
+
 body{
     display: flex;
     flex-direction: column;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    gap: 20px;
 }
 #baner {
     background-color: grey;
@@ -14,12 +17,18 @@ main {
     color: darkslategrey;
     height: 80%;
     width: 100%;
+    display: flex;
+    gap: 20px;
+
 }
 #pblok, #dblok, #tblok{
     background-color: darkgray;
     color: darkslategrey;
-    height: 200px;
-    width: 100%;
+    flex: 1 1 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+
 }
 footer {
     background-color: black;
@@ -36,7 +45,9 @@ table {
 td {
     margin: 20px;
     padding: 20px;
+    
 }
 td:hover {
     background-color: darkgrey;
 }
+
