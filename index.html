@@ -3,33 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Glamur.css?=1">
-    <title>что то </title>
+    <title>Блоки и Меню с Формой</title>
+    <link rel="stylesheet" href="Glamur.css">
 </head>
 <body>
-    <div id="baner">
-        <h1 id="logo"><strong>LOGO</strong></h1>
-        <table>
-            <td><h3>главная</h3></td>
-            <td><h3>контакты</h3></td>
-            <td><h3>o нас</h3></td>
-            <td><h3>login</h3></td>
-        </table>
-    </div>
+    <header>
+        <div class="banner">
+            <div class="logo">LOGO</div>
+            <nav>
+                <table class="menu">
+                    <tr>
+                        <td><a href="#">главная</a></td>
+                        <td><a href="#">контакты</a></td>
+                        <td><a href="#">о нас</a></td>
+                        <td><a href="#" id="login-link">login</a></td>
+                    </tr>
+                </table>
+            </nav>
+        </div>
+    </header>
     <main>
-        <div id="pblok">
-            <H3>тут будет первый блок</H3>
-        </div>
-        <div id="dblok">
-            <h3>второй блок</h3>
-        </div>
-        <Div id="tblok">
-            <h3>третий блок</h3>
-        </Div>
-    </main>
-    <footer>
-        <h3>прикол тут будет</h3>
-    </footer>
+        <section class="blocks">
+            <div class="block">тут будет первый блок</div>
+            <div class="block">второй блок</div>
+            <div class="block">третий блок</div>
+        </section>
 
+        <!-- Скрытая форма -->
+        <div id="form-container" class="form-popup">
+            <form action="submit.php" method="POST" class="form-content">
+                <h2>Заполните данные</h2>
+                <label for="first-name">Имя:</label>
+                <input type="text" id="first-name" name="first_name" required>
+                <label for="last-name">Фамилия:</label>
+                <input type="text" id="last-name" name="last_name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Отправить</button>
+                <button type="button" id="close-btn">Закрыть</button>
+            </form>
+        </div>
+        <footer>
+            <p>прикол тут будет</p>
+        </footer>
+    </main>
+
+    <script>
+        // Показать форму
+        document.getElementById("login-link").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("form-container").style.display = "block";
+        });
+
+        // Закрыть форму
+        document.getElementById("close-btn").addEventListener("click", function () {
+            document.getElementById("form-container").style.display = "none";
+        });
+    </script>
 </body>
 </html>

@@ -1,60 +1,152 @@
+/* Общие стили */
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    height: 100vh; /* Высота всей страницы */
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
 }
 
-#baner {
-    display: flex; /* Используем Flexbox для расположения элементов */
-    justify-content: space-between; /* Таблица слева, логотип справа */
-    align-items: center; /* Центрируем содержимое по вертикали */
-    background-color: grey;
-    color: gainsboro;
-    height: 150px;
+/* Шапка */
+header {
     width: 100%;
-    padding: 0 20px; /* Отступы слева и справа для красоты */
-    box-sizing: border-box; /* Включаем padding в размеры */
-}
-
-main {
-    background-color: darkgray;
-    flex: 1; /* Растягивает на оставшееся место */
+    background-color: #808080;
+    padding: 10px 20px;
     display: flex;
-    gap: 20px;
-    align-items: stretch; /* Растягивает блоки по высоте */
+    justify-content: space-between;
+    align-items: center;
+}
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #757575;
+    padding: 10px 20px;
+    color: white;
 }
 
-#pblok, #dblok, #tblok {
-    background-color: lightgray;
-    color: darkslategrey;
-    flex: 1; /* Все блоки равной ширины */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Меню */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu {
+    border-collapse: collapse;
+}
+
+.menu td {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu td a:hover {
+    color: #ffcc00; /* Цвет при наведении */
+    text-decoration: underline;
+}
+
+/* Основной контент */
+main {
     padding: 20px;
-    box-sizing: border-box;
 }
 
+/* Блоки */
+.blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.block {
+    flex: 1;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Убираем лишние отступы */
+.block:first-child {
+    margin-left: 0;
+}
+
+.block:last-child {
+    margin-right: 0;
+}
+
+/* Футер */
 footer {
     background-color: black;
     color: white;
-    height: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Скрытая форма */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.form-content h2 {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.form-content label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.form-content input {
     width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
-table {
-    margin-left: 0; /* Прижимаем таблицу к левому краю */
-    padding-left: 0px; /* Можно добавить небольшой отступ от края */
-    text-align: left; /* Выравниваем текст внутри таблицы */
+
+.form-content button {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-td {
-    padding: 5px; /* Внутренние отступы для красоты */
-    text-align: left; /* Выравниваем текст внутри ячеек */
+
+.form-content button#close-btn {
+    background-color: #f44336;
 }
-#logo {
-    margin: 0; /* Убираем внешние отступы логотипа */
-    padding: 0; /* Убираем внутренние отступы */
-    text-align: right; /* На всякий случай выравниваем текст справа */
-    font-size: 1.5em; /* Для выделения логотипа */
-}
-td:hover {
-    background-color: darkgrey;
+
+.form-content button:hover {
+    opacity: 0.9;
 }
